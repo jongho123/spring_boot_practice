@@ -21,6 +21,13 @@ public class UserController {
         return "Saved";
     }
 
+    @GetMapping("/del")
+    public @ResponseBody
+    String delUser (@RequestParam String name) {
+        userRepository.deleteByName(name);
+        return "Deleted";
+    }
+
     @GetMapping("/all")
     public @ResponseBody Iterable<User> getAllUsers() {
         return userRepository.findAll();

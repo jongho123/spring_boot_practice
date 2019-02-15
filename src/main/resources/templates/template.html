@@ -2,10 +2,26 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
     <title>Template Test</title>
 </head>
 <body>
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px">My To Do List</h2>
+        <input type="text" class="todoInput" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
     <p>NickName: <span th:text="${nickname}"/></p>
     <p>Message: <span th:text="${message}"/></p>
+
+    <ul id="myUL">
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/event.js"></script>
+
 </body>
 </html>
